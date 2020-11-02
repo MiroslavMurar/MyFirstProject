@@ -36,6 +36,11 @@ public class Student {
 	@Column(name="favourite_language")
 	private String favouriteLanguage; 
 	
+	@NotNull(message="can not be empty")
+	@Column(name="code")
+	private Integer code;
+	
+	
 //	@NotNull(message="can not be empty")
 //	@Size(min=1, message="can not be empty")
 //	@Column(name="operating_systems")
@@ -49,6 +54,14 @@ public class Student {
 //	public void setOperatingSystems(List<String> operatingSystems) {
 //		this.operatingSystems = operatingSystems;
 //	}
+	
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
+	}
 
 	public String getFavouriteLanguage() {
 		return favouriteLanguage;

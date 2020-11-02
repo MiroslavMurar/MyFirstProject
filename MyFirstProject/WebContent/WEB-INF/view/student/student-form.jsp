@@ -45,8 +45,14 @@
 			PHP <form:radiobutton path="favouriteLanguage" value="PHP" /> 
 			Python <form:radiobutton path="favouriteLanguage" value="Python" />
 			<form:errors path="favouriteLanguage"/> 
-			
 			<br><br>
+			
+			
+			
+			Code: 		<form:input path="code"/> 
+						<form:errors path="code"/> 
+			<br><br>
+			
 			
 <!-- 			Operating systems:  -->
 <%-- 					<form:checkbox path="operatingSystems" value="Linux" />  --%>

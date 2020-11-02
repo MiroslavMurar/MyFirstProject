@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.NoSuchElementException;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +23,18 @@ public class StudentController {
 	private StudentDAO studentDAO; 
 	
 	@RequestMapping("/showForm")
-	public String showForm(Model model) {
+	public String showForm(Model model)  {   //throws Exception 
 		
 		Student student = new Student(); 
 		
 		model.addAttribute("student", student); 
 		
+//		try {
+//			
+//		} catch (NoSuchElementException e) {
+//			throw new NoSuchElementException(); 
+//		}
+//		throw new Exception(); 
 		return "student/student-form"; 
 	}
 	
